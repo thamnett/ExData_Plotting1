@@ -16,14 +16,14 @@ png("plot3.png")
 
 #create specified plot
 with(file,plot(datetime,Sub_metering_1,type='l',xlab="",
-                ylab = "Energy sub metering"))
+                ylab = "Energy sub metering",cex.lab=.9))
 with(file,points(datetime,Sub_metering_2,type='l',col='red'))
 with(file,points(datetime,Sub_metering_3,type='l',col='blue'))
 
 #add legend with appropriate legend names
 legend_names <- names(file[,7:9])
 legend("topright",legend=legend_names,lty=1,col=c("black","red","blue"),
-       cex=.5)
+       cex=.95)
 
 #close device to create output
 dev.off()

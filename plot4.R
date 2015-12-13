@@ -21,14 +21,15 @@ png("plot4.png")
 par(mfcol=c(2,2))
 with(file, {
     plot(datetime,Global_active_power,type='l',xlab="",
-         ylab = "Global Active Power")
-    plot(datetime,Sub_metering_1,type='l',xlab="",ylab = "Energy sub metering")
+         ylab = "Global Active Power",cex.lab=.9)
+    plot(datetime,Sub_metering_1,type='l',xlab="",ylab = "Energy sub metering",
+         cex.lab=.9)
     points(datetime,Sub_metering_2,type='l',col='red')
     points(datetime,Sub_metering_3,type='l',col='blue')
     legend("topright",legend=legend_names,lty=1,bty="n",
            ,col=c("black","red","blue"),cex=.95)
-    plot(datetime,Voltage,type='l')
-    plot(datetime,Global_reactive_power,type='l')    
+    plot(datetime,Voltage,type='l',cex.lab=.9)
+    plot(datetime,Global_reactive_power,type='l',cex.lab=.9)    
 })
 
 #close device to create output

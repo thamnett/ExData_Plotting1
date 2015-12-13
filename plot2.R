@@ -15,8 +15,9 @@ file$datetime <- strptime(file$datetime,format="%Y-%m-%d %H:%M:%S")
 png("plot2.png")
 
 #create specified plot
-with(file,plot(datetime,Global_active_power,type='l',xlab=""
-                ,ylab = "Global Active Power (kilowatts)"))
+with(file,plot(datetime,Global_active_power,type='l',xlab="",
+               ylab = "Global Active Power (kilowatts)",
+               cex.lab=.9))
 
 #close device to create output
 dev.off()

@@ -16,7 +16,7 @@ png("plot1.png")
 
 #create specified histogram
 hist(file$Global_active_power, breaks=15,col="red",main="Global Active Power"
-     ,xlab="Global Active Power (kilowatts)")
+     ,xlab="Global Active Power (kilowatts)",cex.lab=.9)
 
 #close device to create output
 dev.off()
